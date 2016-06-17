@@ -54,7 +54,20 @@ public class MainActivity extends AppCompatActivity {
             RxView.clicks(rxbindingFabFab).subscribe(filterTest::testFilter);
         */
 
-        JustAndFromTest justAndFromTest = new JustAndFromTest(getApplicationContext());
-        RxView.clicks(rxbindingFabFab).subscribe(justAndFromTest::testFrom);
+        /* toJustAndFrom -----------------------------------------------------------------------test
+            JustAndFromTest justAndFromTest = new JustAndFromTest(getApplicationContext());
+            RxView.clicks(rxbindingFabFab).subscribe(justAndFromTest::testFrom);
+        */
+
+        /* toDelay -----------------------------------------------------------------------test
+            DelayTest delayTest = new DelayTest(getApplicationContext());
+            RxView.clicks(rxbindingFabFab).subscribe(delayTest::testDelay2);
+        */
+
+        TakeTest takeTest = new TakeTest(getApplicationContext());
+        RxView.clicks(rxbindingFabFab).subscribe(takeTest::testTake);
+
+//        RepeatTest repeatTest = new RepeatTest(getApplicationContext());
+//        RxView.clicks(rxbindingFabFab).subscribe(repeatTest::testRepeat);
     }
 }
